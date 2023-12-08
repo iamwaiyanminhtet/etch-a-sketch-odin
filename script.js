@@ -1,6 +1,8 @@
 let mainContainer = document.querySelector('#container');
 let itemSize = document.querySelector('#item-size');
 let itemSizeValue = document.querySelector('#item-size-value');
+let currentMode = document.querySelector('#current-mode');
+let noGridLines = document.querySelector('#no-grid-lines');
 let btns = document.querySelectorAll('.btn');
 
 // default container layout
@@ -26,6 +28,7 @@ function createDivs (gridSize) {
 }
 defaultContainer();
 
+
 // change layout by user range value
 itemSize.addEventListener('change', (e) => {
     if (mainContainer.childElementCount > 0) {
@@ -38,11 +41,18 @@ itemSize.addEventListener('change', (e) => {
     hoverItems();
 })
 
+// no grid line
+noGridLines.addEventListener("click", () => {
+    let items = document.querySelectorAll('.item');
+    items.forEach(item => item.style.border = "none")
+});
+
 // change hover color mode
 let colourMode = "black";
 btns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         colourMode = e.target.id;
+        currentMode.textContent = e.target.textContent;
     })
 });
 
@@ -59,10 +69,25 @@ function generateRandomColor() {
     return randomColor;
 }
 
+
+// get all color by indexally from array
+let shadedColorCount = 0;
+let blueShadedColor = ["#A9D6E5","#89C2D9","#61A5C2","#468FAF","#2C7DA0","#2A6F97","#014F86","#01497C","#013A63","#012A4A"];
+
+function getShadedColor () {
+    if (shadedColorCount === 10 ) {
+        shadedColorCount = 0;
+    }
+    let shadedColor = blueShadedColor[shadedColorCount];
+    shadedColorCount++ ;
+    return shadedColor;
+}
+
 // change hovered item background color 
 function hoverItems () {
     let items = document.querySelectorAll('.item');
     items.forEach((item) => {
+        item.style.cursor = "cell";
         item.addEventListener('mouseenter', (e) => {
             switch (colourMode) {
                 case "black":
@@ -70,6 +95,9 @@ function hoverItems () {
                 break;
                 case "random-color":
                     e.target.style.backgroundColor = generateRandomColor();
+                break;
+                case "blue-shades":
+                    e.target.style.backgroundColor = getShadedColor();
                 break;
                 case "eraser":
                     e.target.style.backgroundColor = "white"
