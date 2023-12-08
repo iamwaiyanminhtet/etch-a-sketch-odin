@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="buttonsGroup">
+        <div>
+            <input type="range" value="50" min="10" max="50" step="10" id="item-size"> <span id="item-size-value">50 x 50</span>
+        </div>
+        <div>
+            <button id="black" class="btn">Default</button>
+        </div>
+        <div>
+            <button id="random-color" class="btn">Random Color</button>
+        </div>
+        <div>
+            <button id="eraser" class="btn">Eraser</button>
+        </div>
+    </div>
+    <div id="container"></div>
+</body>
+<script src="script.js"></script>
+</html>

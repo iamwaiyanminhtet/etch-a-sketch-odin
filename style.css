@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(48, 48, 48);
+    color: antiquewhite;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#buttonsGroup {
+    background-color: rgb(160, 160, 160);
+    padding: 1rem;
+}
+
+#item-size-value {
+    color: antiquewhite;
+}
+
+input[type="range"] {
+    /* removing default appearance */
+    -webkit-appearance: none; 
+    appearance: none;
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+}
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 15px;
+    background: #0e2630;
+
+}
+input[type="range"]::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.btn {
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #0e2630;
+    color: antiquewhite;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    transition: 0.05s;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+#container {
+    max-width: 600px;
+    height: 600px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: white;
+    border: 1px solid black;
+    /* border-radius: 50%; */
+}
