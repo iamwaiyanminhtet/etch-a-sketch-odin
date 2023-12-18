@@ -7,42 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-
-        <div class="title">
-            <h2>Etch-a-sketch</h2>
+    <div class="layout-container">
+        <div class="info-container">
+            <div class="title">
+                <h2>Etch-a-sketch</h2>
+            </div>
+            
+            <div id="buttonsGroup">
+                <div>
+                    <input type="range" value="50" min="10" max="50" step="10" id="item-size"> <span id="item-size-value">50 x 50</span>
+                </div>
+                <div>
+                    <button id="black" class="btn">Black</button>
+                </div>
+                <div>
+                    <button id="random-color" class="btn">Random Color</button>
+                </div>
+                <div>
+                    <button id="blue-shades" class="btn">Blue Shades</button>
+                </div>
+                <div>
+                    <button id="no-grid-lines" class="btn-no-grid">No Grid Lines</button>
+                </div>
+                <div>
+                    <button id="eraser" class="btn">Eraser</button>
+                </div>
+            </div>
+    
+            <div class="current-mode">
+               <p>Current mode : <span id="current-mode">Black</span></p>
+            </div>
+    
+            <div class="title">
+                <span>Made by <a href="https://github.com/iamwaiyanminhtet">Wai Yan Min Htet</a></span>
+            </div>
         </div>
-        
-        <div id="buttonsGroup">
-            <div>
-                <input type="range" value="50" min="10" max="50" step="10" id="item-size"> <span id="item-size-value">50 x 50</span>
-            </div>
-            <div>
-                <button id="black" class="btn">Black</button>
-            </div>
-            <div>
-                <button id="random-color" class="btn">Random Color</button>
-            </div>
-            <div>
-                <button id="blue-shades" class="btn">Blue Shades</button>
-            </div>
-            <div>
-                <button id="no-grid-lines" class="btn-no-grid">No Grid Lines</button>
-            </div>
-            <div>
-                <button id="eraser" class="btn">Eraser</button>
-            </div>
-        </div>
-
-        <div class="current-mode">
-           <p>Current mode : <span id="current-mode">Black</span></p>
-        </div>
-
-        <div class="title">
-            <span>Made by <a href="https://github.com/iamwaiyanminhtet">Wai Yan Min Htet</a></span>
-        </div>
+        <div id="container"></div>
     </div>
-    <div id="container"></div>
 </body>
 <script src="script.js"></script>
 </html>
