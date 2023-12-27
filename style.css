@@ -26,12 +26,26 @@ a {
     color: rgb(0, 255, 247);
 }
 
+#custom-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 #buttonsGroup {
     background-color: rgb(160, 160, 160);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    height: 25rem;
+}
+
+#itemsButtonGroup {
+    background-color: cadetblue;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
     height: 25rem;
 }
 
@@ -67,7 +81,7 @@ input[type="range"]::-webkit-slider-thumb {
     border: 2px solid rgb(255, 255, 255);
 }
 
-.btn, .btn-no-grid {
+.btn, .btn-no-grid, .btn-reset{
     padding: 10px;
     background-color: #0e2630;
     color: antiquewhite;
@@ -77,6 +91,9 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 1rem;
 }
 
+label {
+    color: black;
+}
 .btn:hover,.btn-no-grid:hover,a:hover {
     opacity: 0.8;
 }
@@ -94,11 +111,6 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-}
-
-.item {
-    background-color: white;
-    border: 1px solid black;
 }
 
 
