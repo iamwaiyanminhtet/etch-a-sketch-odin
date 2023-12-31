@@ -13,7 +13,6 @@ body {
 .layout-container {
     display: flex;
     justify-content: space-evenly;
-    height: 100vh;
     align-items: center;
 }
 
@@ -115,11 +114,10 @@ label {
 
 
 /* tablets and mobile */
-@media screen and (max-width : 800px) {
+@media screen and (max-width : 1000px) {
     .layout-container {
         display: flex;
         flex-direction: column;
-
     }
 
     .info-container {
