@@ -11,9 +11,13 @@ body {
 }
 
 .layout-container {
-    display: flex;
+    /* display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
 }
 
 .title {
@@ -116,8 +120,8 @@ label {
 /* tablets and mobile */
 @media screen and (max-width : 1000px) {
     .layout-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .info-container {
